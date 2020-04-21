@@ -1,0 +1,15 @@
+.hero-header {
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 960px) {
+  .hero-header {
+    height: 350px;
+  }
+}

@@ -1,4 +1,9 @@
 :root {
+  --nav-bg: clear;
+  --nav-text-color: white;
+  --nav-fill-bg: white;
+  --nav-fil-text-color: #242526;
+
   --bg: #242526;
   --bg-accent: #484a4d;
   --text-color: #dadce1;
@@ -11,7 +16,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 html,
@@ -27,13 +32,10 @@ ul {
 }
 
 a {
-  color: var(--text-color);
   text-decoration: none;
 }
 
 .content {
-  background-color: red;
   height: 2000px;
   width: 100vw;
-  margin-top: var(--nav-size);
 }

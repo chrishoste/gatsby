@@ -6,12 +6,13 @@ import MenuIcon from '../../icons/menu.svg'
 
 //Components
 import LanguageSwitcher from '../LanguageSwitcher/languageSwitcher'
-import SocialMedia from '../SocialMedia/socialmedia'
+// import SocialMedia from '../SocialMedia/socialmedia'
 
 export default ({ currentIndex, indices }) => {
   const [scrollPosition, setSrollPosition] = useState(0)
   const handleScroll = () => {
     const position = window.pageYOffset
+    console.log(scrollPosition)
     setSrollPosition(position)
   }
 
@@ -23,11 +24,16 @@ export default ({ currentIndex, indices }) => {
     }
   }, [])
   return (
-    <div className="navbar">
+    <div
+      className={`navbar ${
+        scrollPosition > 30 ? 'navbar-filled' : 'navbar-clear'
+      }`}
+    >
       <div className="navbar-nav">
         <h1>BRANDING</h1>
         <div className="navbar-right">
           <LanguageSwitcher
+            className="language-switcher"
             lang={currentIndex.frontmatter.language}
             indices={indices}
           />

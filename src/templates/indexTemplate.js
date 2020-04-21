@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 
 // Components import
 import NavBar from '../components/NavBar/navbar'
+import HeroHeader from '../components/HeroHeader/heroHeader'
 
 export default function Template({
   data, // Injected by grapQL query
@@ -12,12 +13,13 @@ export default function Template({
   const { translationsJson: translation } = data
 
   return (
-    <div>
+    <>
       <NavBar indices={indices.nodes} currentIndex={currentIndex} />
+      <HeroHeader />
       <div className="content">
         <h1>{translation.index.heading}</h1>
       </div>
-    </div>
+    </>
   )
 }
 

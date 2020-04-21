@@ -1,10 +1,33 @@
 import './heroHeader.scss'
 import React from 'react'
 
-export default function () {
+import { useStaticQuery } from 'gatsby'
+
+import BackgroundImage from 'gatsby-background-image'
+
+const HeroHeader = () => {
+  const data = useStaticQuery(graphql`
+    query Images {
+      image: file(relativePath: { eq: "heroImage.jpg" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `)
+
   return (
-    <div>
+    <BackgroundImage
+      Tag="section"
+      className="hero-header"
+      fluid={data.image.childImageSharp.fluid}
+      backgroundColor={`#040e18`}
+    >
       <h1>Some Text</h1>
-    </div>
+    </BackgroundImage>
   )
 }
+
+export default HeroHeader
