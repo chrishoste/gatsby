@@ -25,7 +25,7 @@ const HeroHeader = () => {
       fluid={data.image.childImageSharp.fluid}
       backgroundColor={`#040e18`}
     >
-      <h1>Some Text</h1>
+      <h1>Some Text 2</h1>
     </BackgroundImage>
   )
 }
