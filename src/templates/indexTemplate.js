@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 // Components import
 import NavBar from '../components/NavBar/navbar'
 import HeroHeader from '../components/HeroHeader/heroHeader'
+import DatePicker from '../components/DatePicker/datePicker'
 
 export default function Template({
   data, // Injected by grapQL query
@@ -16,6 +17,7 @@ export default function Template({
     <>
       <NavBar indices={indices.nodes} currentIndex={currentIndex} />
       <HeroHeader />
+      <DatePicker />
       <div className="content">
         <h1>{translation.index.heading}</h1>
       </div>

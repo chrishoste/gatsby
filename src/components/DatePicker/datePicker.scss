@@ -1,0 +1,96 @@
+.airbnb-date-picker {
+  display: flex;
+  justify-content: center;
+
+  .date-picker-wrapper {
+    margin-top: 1rem;
+    padding: 0.3rem 1rem 1rem 1rem;
+    display: flex;
+    border-radius: 10px;
+    border: 1px solid transparent;
+
+    &:hover {
+      border: var(--border);
+    }
+
+    .date-picker {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+      h3 {
+        font-size: 10px;
+        line-height: 12px;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        padding-bottom: 4px;
+        color: var(--text-color);
+      }
+
+      .date-picker-button {
+        display: flex;
+
+        .check-button {
+          margin-left: 10px;
+          width: 100px;
+          display: flex;
+
+          button {
+            font-size: 1rem;
+            font-weight: 600;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            color: white;
+            background-color: lightcoral;
+            border: 0;
+            outline: none;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+
+          svg {
+            width: 1rem;
+            height: 1rem;
+            padding-right: 10px;
+            fill: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.DateInput_input {
+  width: 80% !important;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 431px) {
+  .airbnb-date-picker {
+    .date-picker-wrapper {
+      .date-picker {
+        h3 {
+        }
+
+        .date-picker-button {
+          flex-direction: column;
+          .check-button {
+            margin-left: 0;
+            margin-top: 10px;
+            width: 100%;
+            button {
+              width: 100%;
+            }
+
+            svg {
+            }
+          }
+        }
+      }
+    }
+  }
+}
