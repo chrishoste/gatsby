@@ -14,7 +14,9 @@ export default function Template({
   return (
     <div>
       <NavBar indices={indices.nodes} currentIndex={currentIndex} />
-      <h1>{translation.index.heading}</h1>
+      <div className="content">
+        <h1>{translation.index.heading}</h1>
+      </div>
     </div>
   )
 }

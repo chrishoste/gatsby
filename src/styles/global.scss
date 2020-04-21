@@ -11,7 +11,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 html,
@@ -29,4 +29,11 @@ ul {
 a {
   color: var(--text-color);
   text-decoration: none;
+}
+
+.content {
+  background-color: red;
+  height: 2000px;
+  width: 100vw;
+  margin-top: var(--nav-size);
 }

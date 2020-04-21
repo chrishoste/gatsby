@@ -1,5 +1,5 @@
 ---
 type: 'index'
 language: 'fr'
-path: '/fr'
+path: '/'
 ---
